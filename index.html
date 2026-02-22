@@ -564,6 +564,7 @@ footer{background:#fff;border-top:1px solid var(--card-border);padding:56px 0 0}
 @media(max-width:768px){
   .nav-links{display:none}
   .nav-actions .btn-primary{display:none}
+  #nav-zara-btn{display:none}
   .hamburger{display:flex}
   .hero h1{font-size:36px}
   .hero-inner{grid-template-columns:1fr}
@@ -617,7 +618,7 @@ footer{background:#fff;border-top:1px solid var(--card-border);padding:56px 0 0}
       </ul>
       <div class="nav-actions">
         <span class="nav-signin" onclick="navigate('#login')" id="nav-signin-btn">Sign In</span>
-        <button onclick="aiOpenModal()" style="background:linear-gradient(135deg,#0038A8,#1a4fd8);color:#fff;border:none;padding:10px 18px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;">🎙️ Talk to Zara</button>
+        <button id="nav-zara-btn" onclick="aiOpenModal()" style="background:linear-gradient(135deg,#0038A8,#1a4fd8);color:#fff;border:none;padding:10px 18px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;">🎙️ Talk to Zara</button>
         <button class="btn-primary btn-sm" onclick="navigate('#search')">Get Started →</button>
         <button class="hamburger" id="hamburger-btn" onclick="toggleMobileMenu()">
           <span></span><span></span><span></span>
@@ -633,7 +634,8 @@ footer{background:#fff;border-top:1px solid var(--card-border);padding:56px 0 0}
   <a onclick="navigate('#search');closeMobileMenu()">🔍 Find Programs</a>
   <a onclick="navigate('#book-call');closeMobileMenu()">📞 Book a Call</a>
   <a onclick="navigate('#login');closeMobileMenu()" id="mobile-signin">Sign In</a>
-  <button class="btn-primary mt-16" onclick="navigate('#search');closeMobileMenu()" style="width:100%;justify-content:center">Get Started →</button>
+  <button onclick="aiOpenModal();closeMobileMenu()" style="width:100%;background:linear-gradient(135deg,#0038A8,#1a4fd8);color:#fff;border:none;padding:14px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;">🎙️ Talk to Zara — AI Advisor</button>
+  <button class="btn-primary mt-8" onclick="navigate('#search');closeMobileMenu()" style="width:100%;justify-content:center">Get Started →</button>
 </div>
 
 <!-- =================== PAGE: HOME =================== -->
@@ -830,7 +832,7 @@ footer{background:#fff;border-top:1px solid var(--card-border);padding:56px 0 0}
           </div>
           <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
             <button onclick="aiOpenModal()" style="background:linear-gradient(135deg,#E8000D,#c8000b);color:#fff;border:none;padding:18px 36px;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(232,0,13,0.4);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform=''">
-              🎙️ Talk to Zara Now - It's Free
+              🎙️ Talk to Zara Now — It's Free
             </button>
             <div style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.4">No sign-up needed<br>3–4 minutes · Voice or text</div>
           </div>
@@ -3250,8 +3252,9 @@ setTimeout(() => {
     }
     #ai-modal-overlay.open { display: flex; }
     #ai-modal {
-      background: #fff; border-radius: 24px; width: 100%; max-width: 500px; margin: 20px;
+      background: #fff; border-radius: 24px; width: 100%; max-width: 500px; margin: 16px;
       overflow: hidden; box-shadow: 0 24px 80px rgba(0,0,0,0.3); font-family: 'DM Sans', sans-serif;
+      display: flex; flex-direction: column; max-height: calc(100vh - 32px);
     }
     #ai-modal-header {
       background: linear-gradient(135deg, #0038A8 0%, #E8000D 100%);
@@ -3269,7 +3272,7 @@ setTimeout(() => {
       cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;
     }
     #ai-close-btn:hover { background: rgba(255,255,255,0.35); }
-    #ai-modal-body { padding: 28px; }
+    #ai-modal-body { padding: 28px; overflow-y: auto; -webkit-overflow-scrolling: touch; flex: 1; }
     .ai-steps { display: flex; gap: 6px; margin-bottom: 24px; align-items: center; }
     .ai-step { flex: 1; height: 4px; border-radius: 4px; background: #E5E7EB; transition: background 0.4s; }
     .ai-step.done { background: #0038A8; }
@@ -3325,12 +3328,20 @@ setTimeout(() => {
     @media (max-width: 480px) {
       #ai-agent-fab { bottom: 20px; right: 16px; }
       #ai-agent-bubble { font-size: 13.5px; padding: 12px 18px; }
-      #ai-modal { margin: 12px; border-radius: 18px; }
+      #ai-modal { margin: 0; border-radius: 20px 20px 0 0; max-height: 92vh; }
+      #ai-modal-overlay { align-items: flex-end; }
+      #ai-modal-body { padding: 20px; }
       .ai-field-row { grid-template-columns: 1fr; }
+      .ai-how-list { padding: 12px; }
+      #ai-modal-header { padding: 20px 20px 16px; }
+      #ai-modal-header h2 { font-size: 18px; }
     }
     @media (max-width: 900px) {
-      #ai-advisor-section > .container > div { grid-template-columns: 1fr !important; }
+      #ai-advisor-section > .container > div { grid-template-columns: 1fr !important; gap: 24px !important; }
       #ai-advisor-section > .container > div > div:last-child { display: none; }
+      #ai-advisor-section h2 { font-size: 26px !important; }
+      #ai-advisor-section p { font-size: 15px !important; }
+      #ai-advisor-section .container { padding-top: 40px !important; padding-bottom: 40px !important; }
     }
   `;
   document.head.appendChild(style);
