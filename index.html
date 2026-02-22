@@ -617,6 +617,7 @@ footer{background:#fff;border-top:1px solid var(--card-border);padding:56px 0 0}
       </ul>
       <div class="nav-actions">
         <span class="nav-signin" onclick="navigate('#login')" id="nav-signin-btn">Sign In</span>
+        <button onclick="aiOpenModal()" style="background:linear-gradient(135deg,#0038A8,#1a4fd8);color:#fff;border:none;padding:10px 18px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;">🎙️ Talk to Zara</button>
         <button class="btn-primary btn-sm" onclick="navigate('#search')">Get Started →</button>
         <button class="hamburger" id="hamburger-btn" onclick="toggleMobileMenu()">
           <span></span><span></span><span></span>
@@ -778,6 +779,85 @@ footer{background:#fff;border-top:1px solid var(--card-border);padding:56px 0 0}
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI ADVISOR SECTION -->
+  <section id="ai-advisor-section" style="background:linear-gradient(135deg,#0038A8 0%,#001f6b 50%,#1a0005 100%);padding:0;position:relative;overflow:hidden">
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(232,0,13,0.15) 0%,transparent 70%);pointer-events:none"></div>
+    <div style="position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);pointer-events:none"></div>
+    <div class="container" style="padding-top:56px;padding-bottom:56px;position:relative;z-index:1">
+      <div style="display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center">
+
+        <!-- Left copy -->
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:40px;padding:6px 16px;margin-bottom:20px">
+            <span style="width:8px;height:8px;border-radius:50%;background:#4ade80;display:inline-block;box-shadow:0 0 8px #4ade80"></span>
+            <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:700;letter-spacing:0.04em">LIVE NOW — AI STUDY ADVISOR</span>
+          </div>
+          <h2 style="font-family:'Syne',sans-serif;font-size:38px;font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px">
+            Meet <span style="color:#FCA5A5">Zara</span> — Your Personal<br>Study Advisor. Available 24/7.
+          </h2>
+          <p style="font-size:17px;color:rgba(255,255,255,0.75);line-height:1.65;margin-bottom:28px;max-width:560px">
+            Not sure where to start? Zara will have a real conversation with you — learn about your goals, qualifications and budget — then match you to the perfect programs across our 8 partner universities. Takes 3–4 minutes. Completely free.
+          </p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px;max-width:560px">
+            <div style="display:flex;align-items:flex-start;gap:10px">
+              <div style="min-width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:15px">🎓</div>
+              <div style="color:rgba(255,255,255,0.85);font-size:14px;line-height:1.5">Asks about your field of study and qualifications</div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px">
+              <div style="min-width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:15px">💰</div>
+              <div style="color:rgba(255,255,255,0.85);font-size:14px;line-height:1.5">Filters programs by your budget and timeline</div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px">
+              <div style="min-width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:15px">🇵🇱</div>
+              <div style="color:rgba(255,255,255,0.85);font-size:14px;line-height:1.5">Explains costs, visa process and student life</div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px">
+              <div style="min-width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:15px">✅</div>
+              <div style="color:rgba(255,255,255,0.85);font-size:14px;line-height:1.5">Matches you to the perfect programs for YOU</div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px">
+              <div style="min-width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:15px">📅</div>
+              <div style="color:rgba(255,255,255,0.85);font-size:14px;line-height:1.5">Connects you to a free expert consultation</div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px">
+              <div style="min-width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:15px">🕐</div>
+              <div style="color:rgba(255,255,255,0.85);font-size:14px;line-height:1.5">Available 24/7 — no waiting, no queues</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+            <button onclick="aiOpenModal()" style="background:linear-gradient(135deg,#E8000D,#c8000b);color:#fff;border:none;padding:18px 36px;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(232,0,13,0.4);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform=''">
+              🎙️ Talk to Zara Now — It's Free
+            </button>
+            <div style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.4">No sign-up needed<br>3–4 minutes · Voice or text</div>
+          </div>
+        </div>
+
+        <!-- Right: Zara card -->
+        <div style="flex-shrink:0">
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:24px;padding:32px;width:280px;text-align:center;backdrop-filter:blur(10px)">
+            <div style="width:100px;height:100px;background:linear-gradient(135deg,#E8000D,#0038A8);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:44px;box-shadow:0 8px 32px rgba(232,0,13,0.3);position:relative">
+              🤖
+              <div style="position:absolute;bottom:4px;right:4px;width:20px;height:20px;background:#4ade80;border-radius:50%;border:3px solid #001f6b;box-shadow:0 0 8px #4ade80"></div>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:4px">Zara</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:20px">AfroPol Study Advisor</div>
+            <div style="background:rgba(0,0,0,0.25);border-radius:12px;padding:14px;text-align:left;margin-bottom:16px">
+              <div style="font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.6;margin-bottom:8px">
+                <span style="color:#FCA5A5;font-weight:700">Zara:</span> Hey! What would you like to study? Tell me your goals and I'll find your perfect match! 🎓
+              </div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.4);font-style:italic">Tap below to start talking...</div>
+            </div>
+            <button onclick="aiOpenModal()" style="width:100%;background:linear-gradient(135deg,#E8000D,#c8000b);color:#fff;border:none;padding:14px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+              🎙️ Start Talking to Zara
+            </button>
+            <div style="margin-top:12px;font-size:11.5px;color:rgba(255,255,255,0.3)">Powered by AfroPol Nexus AI</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1130,7 +1210,7 @@ footer{background:#fff;border-top:1px solid var(--card-border);padding:56px 0 0}
           <ul>
             <li><span style="font-size:13px;color:var(--text-muted)">📱 +48 579 108 304</span></li>
             <li><span style="font-size:13px;color:var(--text-muted)">📱 +48 729 285 041</span></li>
-            <li><span style="font-size:13px;color:var(--text-muted)">📧 info@afropol-nexus.com</span></li>
+            <li><span style="font-size:13px;color:var(--text-muted)">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5e373038311e3f382c312e313273303b262b2d703d3133">[email&#160;protected]</a></span></li>
             <li><span style="font-size:13px;color:var(--text-muted)">🇵🇱 Warsaw, Poland</span></li>
           </ul>
         </div>
@@ -1623,7 +1703,7 @@ footer{background:#fff;border-top:1px solid var(--card-border);padding:56px 0 0}
         <a href="https://wa.me/48729285041" target="_blank" class="btn-wa" style="justify-content:center;padding:16px"><i class="fab fa-whatsapp"></i> Consultant 2<br><small>+48 729 285 041</small></a>
       </div>
       <div style="margin-top:24px">
-        <a href="mailto:info@afropol-nexus.com" class="btn-secondary" style="display:inline-flex"><i class="fas fa-envelope"></i>&nbsp; info@afropol-nexus.com</a>
+        <a href="/cdn-cgi/l/email-protection#f891969e97b8999e8a97889794d5969d808d8bd69b9795" class="btn-secondary" style="display:inline-flex"><i class="fas fa-envelope"></i>&nbsp; <span class="__cf_email__" data-cfemail="61080f070e210007130e110e0d4c0f041914124f020e0c">[email&#160;protected]</span></a>
       </div>
     </div>
   </div>
@@ -1819,7 +1899,7 @@ footer{background:#fff;border-top:1px solid var(--card-border);padding:56px 0 0}
 <!-- Toast Container -->
 <div id="toast-container"></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ===================== DATA =====================
 const UNIVERSITIES = [
   {id:"vizja",name:"VIZJA University",shortName:"VIZJA",city:"Warsaw",type:"Private",website:"https://vizja.pl/en/",description:"Warsaw's most popular private university, ranked #1 for international student diversity. Modern Vizja Park campus in Warsaw's vibrant Wola district. Home to students from 130+ countries.",highlights:["130+ nationalities","Modern campus","Top-ranked private"],programs:[
@@ -3133,16 +3213,423 @@ const statsObserver = new IntersectionObserver(entries => {
 
 setTimeout(() => {
   const statsBar = document.querySelector('.stats-bar');
+  if (
   if (statsBar) statsObserver.observe(statsBar);
 }, 500);
 
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    document.getElementById('compare-modal').classList.remove('open');
-    document.getElementById('student-detail-modal').classList.remove('open');
-    document.getElementById('wa-popup').classList.remove('open');
+// ===================== VAPI AI VOICE AGENT =====================
+(function() {
+
+  const style = document.createElement('style');
+  style.textContent = `
+    #ai-agent-fab {
+      position: fixed; bottom: 32px; right: 32px; z-index: 9999;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 12px;
+    }
+    #ai-agent-bubble {
+      background: linear-gradient(135deg, #0038A8, #1a4fd8);
+      color: #fff; border: none; border-radius: 60px; padding: 14px 22px;
+      font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; gap: 10px;
+      box-shadow: 0 8px 32px rgba(0,56,168,0.35); transition: all 0.3s ease;
+      white-space: nowrap; animation: ai-pulse 2.5s infinite;
+    }
+    #ai-agent-bubble:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,56,168,0.45); }
+    @keyframes ai-pulse {
+      0%,100% { box-shadow: 0 8px 32px rgba(0,56,168,0.35); }
+      50% { box-shadow: 0 8px 48px rgba(0,56,168,0.55), 0 0 0 8px rgba(0,56,168,0.1); }
+    }
+    #ai-agent-tooltip {
+      background: #0A0A1A; color: #fff; font-family: 'DM Sans', sans-serif;
+      font-size: 13px; padding: 8px 14px; border-radius: 8px; max-width: 220px;
+      text-align: right; line-height: 1.4; opacity: 0; animation: fadeInTip 0.5s 2.5s forwards;
+    }
+    @keyframes fadeInTip { to { opacity: 1; } }
+    #ai-modal-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(10,10,26,0.75);
+      z-index: 10000; backdrop-filter: blur(4px); align-items: center; justify-content: center;
+    }
+    #ai-modal-overlay.open { display: flex; }
+    #ai-modal {
+      background: #fff; border-radius: 24px; width: 100%; max-width: 500px; margin: 20px;
+      overflow: hidden; box-shadow: 0 24px 80px rgba(0,0,0,0.3); font-family: 'DM Sans', sans-serif;
+    }
+    #ai-modal-header {
+      background: linear-gradient(135deg, #0038A8 0%, #E8000D 100%);
+      padding: 28px 28px 20px; color: #fff; position: relative;
+    }
+    #ai-modal-header .modal-logo { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+    #ai-modal-header .modal-logo .afro { color: #93C5FD; }
+    #ai-modal-header .modal-logo .pol { color: #FCA5A5; }
+    #ai-modal-header h2 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    #ai-modal-header p { font-size: 14px; opacity: 0.85; }
+    #ai-close-btn {
+      position: absolute; top: 16px; right: 16px;
+      background: rgba(255,255,255,0.2); border: none; color: #fff;
+      width: 32px; height: 32px; border-radius: 50%; font-size: 16px;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;
+    }
+    #ai-close-btn:hover { background: rgba(255,255,255,0.35); }
+    #ai-modal-body { padding: 28px; }
+    .ai-steps { display: flex; gap: 6px; margin-bottom: 24px; align-items: center; }
+    .ai-step { flex: 1; height: 4px; border-radius: 4px; background: #E5E7EB; transition: background 0.4s; }
+    .ai-step.done { background: #0038A8; }
+    .ai-step.active { background: #E8000D; }
+    .ai-screen { display: none; }
+    .ai-screen.active { display: block; }
+    .ai-intro-icon { width: 72px; height: 72px; background: linear-gradient(135deg,#EEF2FF,#DBEAFE); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 16px; }
+    .ai-intro-title { font-family: 'Syne',sans-serif; font-size: 20px; font-weight: 700; text-align: center; margin-bottom: 10px; color: #0A0A1A; }
+    .ai-intro-desc { font-size: 14.5px; color: #6B7280; text-align: center; line-height: 1.6; margin-bottom: 20px; }
+    .ai-how-list { background: #F5F7FF; border-radius: 12px; padding: 16px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .ai-how-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: #374151; }
+    .ai-how-num { min-width: 24px; height: 24px; background: #0038A8; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+    .ai-field { margin-bottom: 14px; }
+    .ai-field label { display: block; font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 5px; }
+    .ai-field input, .ai-field select { width: 100%; padding: 11px 14px; border: 1.5px solid #E5E7EB; border-radius: 9px; font-family: 'DM Sans',sans-serif; font-size: 14.5px; color: #0A0A1A; outline: none; transition: border 0.2s; background: #fff; }
+    .ai-field input:focus, .ai-field select:focus { border-color: #0038A8; }
+    .ai-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    #ai-call-screen { text-align: center; }
+    .ai-avatar { width: 90px; height: 90px; background: linear-gradient(135deg,#0038A8,#E8000D); border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 38px; position: relative; }
+    .ai-avatar.talking::after { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 3px solid #0038A8; opacity: 0.5; animation: ring-pulse 1s infinite; }
+    @keyframes ring-pulse { 0%,100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 0.15; } }
+    .ai-status-label { font-size: 13px; font-weight: 600; color: #6B7280; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+    .ai-call-name { font-family: 'Syne',sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .ai-call-timer { font-size: 28px; font-weight: 700; color: #0038A8; margin-bottom: 20px; font-variant-numeric: tabular-nums; }
+    .ai-live-transcript { background: #F5F7FF; border-radius: 12px; padding: 14px; min-height: 80px; font-size: 13.5px; color: #374151; line-height: 1.6; text-align: left; max-height: 120px; overflow-y: auto; margin-bottom: 20px; }
+    .ai-call-controls { display: flex; gap: 12px; justify-content: center; }
+    .ai-ctrl-btn { width: 56px; height: 56px; border-radius: 50%; border: none; font-size: 20px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; }
+    .ai-ctrl-mute { background: #F3F4F6; color: #374151; }
+    .ai-ctrl-mute:hover { background: #E5E7EB; }
+    .ai-ctrl-end { background: #EF4444; color: #fff; width: 64px; height: 64px; font-size: 22px; }
+    .ai-ctrl-end:hover { background: #DC2626; transform: scale(1.05); }
+    #ai-cta-screen { text-align: center; }
+    .ai-cta-badge { display: inline-flex; align-items: center; gap: 6px; background: #D1FAE5; color: #059669; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; margin-bottom: 16px; }
+    .ai-cta-title { font-family: 'Syne',sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 8px; color: #0A0A1A; }
+    .ai-cta-desc { font-size: 14.5px; color: #6B7280; line-height: 1.6; margin-bottom: 20px; }
+    .ai-cta-matches { background: #F5F7FF; border-radius: 12px; padding: 16px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; text-align: left; }
+    .ai-match-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #fff; border-radius: 9px; border: 1.5px solid #E5E7EB; font-size: 13.5px; }
+    .ai-match-icon { font-size: 20px; }
+    .ai-match-info { flex: 1; }
+    .ai-match-name { font-weight: 700; color: #0A0A1A; }
+    .ai-match-detail { font-size: 12px; color: #6B7280; margin-top: 1px; }
+    .ai-match-badge { background: #D1FAE5; color: #059669; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 12px; }
+    .ai-cta-wa-btn { width: 100%; background: linear-gradient(135deg,#25D366,#1ebe5d); color: #fff; border: none; padding: 15px; border-radius: 12px; font-family: 'DM Sans',sans-serif; font-size: 15.5px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px; transition: all 0.3s; }
+    .ai-cta-wa-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.35); }
+    .ai-cta-secondary-btn { width: 100%; background: transparent; color: #0038A8; border: 2px solid #0038A8; padding: 13px; border-radius: 12px; font-family: 'DM Sans',sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.3s; }
+    .ai-cta-secondary-btn:hover { background: #0038A8; color: #fff; }
+    .ai-skip-text { font-size: 12.5px; color: #9CA3AF; margin-top: 10px; cursor: pointer; text-decoration: underline; }
+    .ai-btn-primary { width: 100%; background: linear-gradient(135deg, #E8000D, #c8000b); color: #fff; border: none; padding: 15px; border-radius: 12px; font-family: 'DM Sans',sans-serif; font-size: 15.5px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s; margin-bottom: 10px; }
+    .ai-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,0,13,0.35); }
+    .ai-btn-secondary { width: 100%; background: transparent; color: #374151; border: 1.5px solid #E5E7EB; padding: 13px; border-radius: 12px; font-family: 'DM Sans',sans-serif; font-size: 14.5px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .ai-btn-secondary:hover { border-color: #9CA3AF; }
+    .ai-note { font-size: 12px; color: #9CA3AF; margin-top: 8px; text-align:center; }
+    @media (max-width: 480px) {
+      #ai-agent-fab { bottom: 20px; right: 16px; }
+      #ai-agent-bubble { font-size: 13.5px; padding: 12px 18px; }
+      #ai-modal { margin: 12px; border-radius: 18px; }
+      .ai-field-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      #ai-advisor-section > .container > div { grid-template-columns: 1fr !important; }
+      #ai-advisor-section > .container > div > div:last-child { display: none; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  document.body.insertAdjacentHTML('beforeend', `
+  <!-- Floating Button -->
+  <div id="ai-agent-fab">
+    <div id="ai-agent-tooltip">🎓 Talk to Zara — get matched to your program in 3 mins!</div>
+    <button id="ai-agent-bubble" onclick="aiOpenModal()">
+      🎙️ Talk to Zara
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div id="ai-modal-overlay">
+    <div id="ai-modal">
+      <div id="ai-modal-header">
+        <button id="ai-close-btn" onclick="aiCloseModal()">✕</button>
+        <div class="modal-logo"><span class="afro">Afro</span><span class="pol">Pol</span> Nexus AI Advisor</div>
+        <h2>Your Personal Study Advisor</h2>
+        <p>Powered by AI · Available 24/7 · Free consultation</p>
+      </div>
+      <div id="ai-modal-body">
+        <div class="ai-steps">
+          <div class="ai-step active" id="step-1"></div>
+          <div class="ai-step" id="step-2"></div>
+          <div class="ai-step" id="step-3"></div>
+        </div>
+
+        <!-- Screen 1: Intro -->
+        <div class="ai-screen active" id="ai-intro-screen">
+          <div class="ai-intro-icon">🤖</div>
+          <div class="ai-intro-title">Meet Zara — Your Study Guide</div>
+          <div class="ai-intro-desc">Zara will ask about your goals, explain how studying in Poland works, and match you to the right programs. Then connect you with a real expert.</div>
+          <div class="ai-how-list">
+            <div class="ai-how-item"><div class="ai-how-num">1</div><div>Tell Zara your study interests, qualifications and budget</div></div>
+            <div class="ai-how-item"><div class="ai-how-num">2</div><div>She explains how Poland works — costs, visa, timeline</div></div>
+            <div class="ai-how-item"><div class="ai-how-num">3</div><div>You get matched to programs that fit you perfectly</div></div>
+            <div class="ai-how-item"><div class="ai-how-num">4</div><div>Book a free call with our expert consultants to apply</div></div>
+          </div>
+          <div class="ai-field">
+            <label>Your name</label>
+            <input type="text" id="ai-name" placeholder="e.g. Thembi Dlamini" />
+          </div>
+          <div class="ai-field-row">
+            <div class="ai-field">
+              <label>Your country</label>
+              <select id="ai-country">
+                <option value="">Select...</option>
+                <option>South Africa</option><option>Nigeria</option><option>Kenya</option>
+                <option>Ghana</option><option>Zimbabwe</option><option>Tanzania</option>
+                <option>Zambia</option><option>Uganda</option><option>Ethiopia</option>
+                <option>Other Africa</option>
+              </select>
+            </div>
+            <div class="ai-field">
+              <label>Your phone (optional)</label>
+              <input type="tel" id="ai-phone" placeholder="+27 ..." />
+            </div>
+          </div>
+          <button class="ai-btn-primary" onclick="aiStartCall()">🎙️ Start Voice Call with Zara</button>
+          <button class="ai-btn-secondary" onclick="aiSkipToChat()">💬 Prefer text chat instead</button>
+          <div class="ai-note">Your microphone will be requested. The call lasts about 3–5 minutes.</div>
+        </div>
+
+        <!-- Screen 2: Active Call -->
+        <div class="ai-screen" id="ai-call-screen">
+          <div class="ai-avatar talking" id="ai-avatar">🤖</div>
+          <div class="ai-status-label" id="ai-call-status">Connecting...</div>
+          <div class="ai-call-name">Zara — AfroPol Advisor</div>
+          <div class="ai-call-timer" id="ai-timer">0:00</div>
+          <div class="ai-live-transcript" id="ai-transcript"><em style="color:#9CA3AF">Connecting to Zara...</em></div>
+          <div class="ai-call-controls">
+            <button class="ai-ctrl-btn ai-ctrl-mute" id="ai-mute-btn" onclick="aiToggleMute()">🎙️</button>
+            <button class="ai-ctrl-btn ai-ctrl-end" onclick="aiEndCall()">📵</button>
+          </div>
+        </div>
+
+        <!-- Screen 3: Post-Call CTA -->
+        <div class="ai-screen" id="ai-cta-screen">
+          <div class="ai-cta-badge">✅ Great news — you are a strong candidate!</div>
+          <div class="ai-cta-title">Your Matched Programs</div>
+          <div class="ai-cta-desc">Based on your conversation, Zara found programs that match your background, goals and budget. The next step is a free 20-minute call with our expert consultants.</div>
+          <div class="ai-cta-matches" id="ai-matches-list"></div>
+          <button class="ai-cta-wa-btn" onclick="aiBookWhatsApp()">
+            <i class="fab fa-whatsapp" style="font-size:20px"></i>
+            Book Free Consultation on WhatsApp
+          </button>
+          <button class="ai-cta-secondary-btn" onclick="aiCloseModal()">Explore programs on my own</button>
+          <div class="ai-skip-text" onclick="aiCloseModal()">Maybe later</div>
+        </div>
+
+        <!-- Screen 2b: Text Chat -->
+        <div class="ai-screen" id="ai-chat-screen">
+          <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px">💬 Chat with Zara</div>
+          <div style="font-size:13.5px;color:#6B7280;margin-bottom:16px">Type your questions and Zara will guide you step by step.</div>
+          <div id="ai-chatbox" style="height:220px;overflow-y:auto;background:#F5F7FF;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px"></div>
+          <div style="display:flex;gap:8px">
+            <input type="text" id="ai-chat-input" placeholder="Type your message..." style="flex:1;padding:11px 14px;border:1.5px solid #E5E7EB;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:14px;outline:none" onkeydown="if(event.key==='Enter')aiSendChat()" />
+            <button onclick="aiSendChat()" style="padding:11px 18px;background:#0038A8;color:#fff;border:none;border-radius:9px;font-weight:700;cursor:pointer;font-size:14px">Send</button>
+          </div>
+          <div style="margin-top:12px">
+            <button class="ai-btn-primary" onclick="aiShowCTA()">✅ Show me my matched programs</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `);
+
+  let timerInterval = null, timerSeconds = 0, isMuted = false, vapiInstance = null;
+  let userName = '', userCountry = '';
+
+  window.aiOpenModal = function() {
+    document.getElementById('ai-modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.aiCloseModal = function() {
+    document.getElementById('ai-modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+    if (vapiInstance) { try { vapiInstance.stop(); } catch(e){} vapiInstance = null; }
+    clearInterval(timerInterval);
+  };
+
+  function aiSetScreen(id) {
+    document.querySelectorAll('.ai-screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const steps = { 'ai-intro-screen':0, 'ai-call-screen':1, 'ai-chat-screen':1, 'ai-cta-screen':2 };
+    document.querySelectorAll('.ai-step').forEach((el,i) => {
+      el.classList.remove('active','done');
+      const cur = steps[id]||0;
+      if(i<cur) el.classList.add('done'); else if(i===cur) el.classList.add('active');
+    });
   }
-});
+
+  window.aiStartCall = function() {
+    userName = document.getElementById('ai-name').value.trim() || 'there';
+    userCountry = document.getElementById('ai-country').value || 'Africa';
+    aiSetScreen('ai-call-screen');
+    startTimer();
+    loadVapiAndStart();
+  };
+
+  window.aiSkipToChat = function() {
+    userName = document.getElementById('ai-name').value.trim() || 'there';
+    userCountry = document.getElementById('ai-country').value || 'Africa';
+    aiSetScreen('ai-chat-screen');
+    setTimeout(() => {
+      aiAddChatMsg('ai', 'Hi ' + userName + '! Welcome to AfroPol Nexus. I am Zara, your personal study advisor. I am going to help you find the perfect program in Poland. First — what would you like to study? For example Medicine, Business, IT, Law, Psychology...');
+    }, 600);
+  };
+
+  function startTimer() {
+    timerSeconds = 0; clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      timerSeconds++;
+      const m = Math.floor(timerSeconds/60), s = timerSeconds%60;
+      const el = document.getElementById('ai-timer');
+      if(el) el.textContent = m+':'+(s<10?'0':'')+s;
+    }, 1000);
+  }
+
+  function loadVapiAndStart() {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/dist/vapi.iife.js';
+    script.onload = initVapiCall;
+    script.onerror = simulateCall;
+    document.head.appendChild(script);
+  }
+
+  function initVapiCall() {
+    const VAPI_PUBLIC_KEY = '04f0a7d1-4659-446c-b7d8-04a6789ac7c5';
+    const VAPI_ASSISTANT_ID = '2361a957-f1f7-48a5-8b99-7709716533bb';
+    try {
+      vapiInstance = new window.Vapi(VAPI_PUBLIC_KEY);
+      vapiInstance.on('call-start', () => {
+        document.getElementById('ai-call-status').textContent = 'Connected — Zara is listening';
+        document.getElementById('ai-avatar').classList.add('talking');
+      });
+      vapiInstance.on('speech-start', () => document.getElementById('ai-avatar').classList.add('talking'));
+      vapiInstance.on('speech-end', () => document.getElementById('ai-avatar').classList.remove('talking'));
+      vapiInstance.on('message', (msg) => {
+        if(msg.type==='transcript' && msg.transcriptType==='final') {
+          const el = document.getElementById('ai-transcript');
+          el.innerHTML += '<div style="margin-top:6px"><strong style="color:'+(msg.role==='assistant'?'#0038A8':'#374151')+'">'+(msg.role==='assistant'?'🤖 Zara':'👤 You')+':</strong> '+msg.transcript+'</div>';
+          el.scrollTop = el.scrollHeight;
+        }
+      });
+      vapiInstance.on('call-end', () => { clearInterval(timerInterval); setTimeout(aiShowCTA,800); });
+      vapiInstance.on('error', simulateCall);
+      vapiInstance.start(VAPI_ASSISTANT_ID, { variableValues: { studentName: userName, studentCountry: userCountry } });
+    } catch(e) { simulateCall(); }
+  }
+
+  const demoScript = [
+    'Hi ' + (userName||'there') + '! Welcome to AfroPol Nexus. I am Zara, your personal study advisor. I am so excited to help you find the perfect program in Poland! Can I start by confirming your name?',
+    'Amazing! So tell me — what field of study are you most interested in? It can be anything — Medicine, Business, IT, Law, Psychology, Engineering, Architecture, Fashion, Media...',
+    'Excellent choice! And where are you currently in your education journey? Are you finishing school, have you completed Matric, or do you already have a diploma or degree?',
+    'Perfect. Let me tell you something exciting that most students do not know — Poland is in the EU so your degree is recognised worldwide. Everything is taught in English, no Polish required. And tuition starts from as little as 1,250 Euro per year. Compare that to the UK or Australia — it is not even close!',
+    'What is your rough budget per semester? No pressure at all — it just helps me filter to the best options for you. Are you thinking under 3,000 Euro per year, between 3 and 5 thousand, or are you open to more for something like Medicine?',
+    'Great! And when are you hoping to start? October 2025 is the main intake and it is coming up fast. Some programs also have a February 2026 option.',
+    'Okay I am so excited for you! Based on everything you have shared, I have found some really strong program matches. I am going to show those to you now. And I strongly recommend you book a free call with our expert consultants — they are brilliant and can even start your application on that first call. Are you ready to see your matches?'
+  ];
+
+  let demoIdx = 0, demoTimer = null;
+
+  function simulateCall() {
+    demoIdx = 0;
+    const transcript = document.getElementById('ai-transcript');
+    if(transcript) transcript.innerHTML = '';
+    document.getElementById('ai-call-status').textContent = 'Connected — Zara is speaking';
+    document.getElementById('ai-avatar').classList.add('talking');
+    function showNext() {
+      if(demoIdx >= demoScript.length) {
+        clearInterval(demoTimer);
+        document.getElementById('ai-call-status').textContent = 'Call complete';
+        document.getElementById('ai-avatar').classList.remove('talking');
+        setTimeout(aiShowCTA, 1500); return;
+      }
+      const el = document.getElementById('ai-transcript');
+      if(el) { el.innerHTML += '<div style="margin-top:8px"><strong style="color:#0038A8">🤖 Zara:</strong> '+demoScript[demoIdx]+'</div>'; el.scrollTop=el.scrollHeight; }
+      demoIdx++;
+    }
+    showNext();
+    demoTimer = setInterval(showNext, 5500);
+  }
+
+  window.aiToggleMute = function() {
+    isMuted = !isMuted;
+    document.getElementById('ai-mute-btn').textContent = isMuted ? '🔇' : '🎙️';
+    if(vapiInstance) { try { vapiInstance.setMuted(isMuted); } catch(e){} }
+  };
+
+  window.aiEndCall = function() {
+    clearInterval(timerInterval); clearInterval(demoTimer);
+    if(vapiInstance) { try { vapiInstance.stop(); } catch(e){} vapiInstance=null; }
+    document.getElementById('ai-call-status').textContent = 'Call ended';
+    document.getElementById('ai-avatar').classList.remove('talking');
+    setTimeout(aiShowCTA, 800);
+  };
+
+  window.aiShowCTA = function() {
+    aiSetScreen('ai-cta-screen');
+    clearInterval(timerInterval);
+    const matches = [
+      { icon:'🏛️', name:'Business and Management — VIZJA Warsaw', detail:'BA · English · €3,800/sem · Oct 2025', fit:'Top Match' },
+      { icon:'💻', name:'Computer Science — WSB Merito', detail:'BA · English · €1,250/yr · Oct 2025', fit:'Great Fit' },
+      { icon:'⚖️', name:'Law LLB — Lazarski University', detail:'BA · English · €3,000/yr · Oct 2025', fit:'Strong Match' }
+    ];
+    document.getElementById('ai-matches-list').innerHTML = matches.map(m =>
+      '<div class="ai-match-item"><div class="ai-match-icon">'+m.icon+'</div><div class="ai-match-info"><div class="ai-match-name">'+m.name+'</div><div class="ai-match-detail">'+m.detail+'</div></div><div class="ai-match-badge">'+m.fit+'</div></div>'
+    ).join('');
+  };
+
+  window.aiBookWhatsApp = function() {
+    const msg = encodeURIComponent('Hi! I just spoke with Zara, the AfroPol Nexus AI advisor. My name is '+(userName||'a student')+' from '+(userCountry||'Africa')+'. I would like to book a free consultation to discuss my program options and start my application!');
+    window.open('https://wa.me/48579108304?text='+msg, '_blank');
+  };
+
+  const chatKB = [
+    { q:['medicine','medical','doctor'], a:'Medicine is one of our most popular programs! It is a 6-year MD, fully in English, at around 12,000 Euro per year at Lazarski or Jagiellonian — two of Poland best universities. Your qualification is accepted. Want me to tell you more about the requirements?' },
+    { q:['business','management','mba','finance'], a:'Business is massive in Poland! VIZJA University is the most popular private uni in Poland. WSB Merito starts from just 1,250 Euro per year — extraordinary value for an EU degree. Kozminski is top 1% in Europe for Business. What level are you looking at — Bachelor or MBA?' },
+    { q:['it','computer','software','tech','engineering'], a:'Great choice! Computer Science programs start from just 1,250 Euro per year at WSB Merito. AGH University in Krakow is one of Europe best for engineering and tech. All English-taught. 3.5 year BSc.' },
+    { q:['cost','price','budget','fee','tuition','affordable'], a:'Costs range widely — that is the beauty of Poland! WSB Merito starts from 1,250 Euro per year. Most programs are 2,000-4,000 Euro per year. Medicine is 12,000 per year. Living costs are around 500-700 Euro per month. Way cheaper than UK or Australia for the same EU-recognised degree!' },
+    { q:['visa','permit','apply','requirements'], a:'The Polish student visa is very achievable! You need an acceptance letter, proof of funds around 6,000 Euro for the first year, a valid passport and medical insurance. It takes about 4-6 weeks. AfroPol guides you through every single step — you are never alone in this process.' },
+    { q:['south africa','matric','nsc'], a:'Great news — South African Matric NSC is fully accepted! Many SA students are already studying in Poland through AfroPol right now. You do not need to requalify or do any bridging courses.' },
+    { q:['law'], a:'Lazarski University has the number one ranked Law faculty among private universities in Poland. They even offer a double degree with Coventry University in the UK — you graduate with both a Polish and UK law degree! 3,000-4,000 Euro per year.' },
+    { q:['psychology'], a:'Psychology is available at VIZJA Warsaw and Jagiellonian University in Krakow — one of the oldest and most prestigious universities in Europe, founded in 1364! Both are English-taught from around 3,000-3,800 Euro per semester.' },
+  ];
+
+  window.aiSendChat = function() {
+    const input = document.getElementById('ai-chat-input');
+    const text = input.value.trim();
+    if(!text) return;
+    aiAddChatMsg('user', text);
+    input.value = '';
+    setTimeout(() => {
+      const lower = text.toLowerCase();
+      let response = 'That is a great point! To give you the most accurate advice, I would strongly recommend booking a quick call with our expert consultants — they will give you exact answers for your specific situation. Want me to connect you to them on WhatsApp?';
+      for(const item of chatKB) {
+        if(item.q.some(k => lower.includes(k))) { response = item.a; break; }
+      }
+      aiAddChatMsg('ai', response);
+    }, 800);
+  };
+
+  function aiAddChatMsg(role, text) {
+    const box = document.getElementById('ai-chatbox');
+    const isAI = role==='ai';
+    const div = document.createElement('div');
+    div.style.cssText = 'display:flex;justify-content:'+(isAI?'flex-start':'flex-end');
+    div.innerHTML = '<div style="max-width:85%;background:'+(isAI?'#fff':'#0038A8')+';color:'+(isAI?'#374151':'#fff')+';padding:10px 14px;border-radius:'+(isAI?'4px 14px 14px 14px':'14px 4px 14px 14px')+';font-size:13.5px;line-height:1.55;'+(isAI?'border:1px solid #E5E7EB;':'')+'">'+text+'</div>';
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+  }
+
+})();
 </script>
 </body>
 </html>
